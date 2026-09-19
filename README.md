@@ -57,15 +57,6 @@ Requirements: Node.js 22.13 or newer and pnpm.
     pnpm exec tsc --noEmit
     pnpm build
 
-## Five-minute interview demonstration
-
-1. From **Study overview**, explain the data-quality signals and select **Open active casebook**.
-2. Open **Pre-dose**, change the ANC to 1.2, and show the protocol-threshold warning.
-3. Select **Import mock FHIR** and point out the provenance badges beside imported data.
-4. Save the corrected values and enter a reason for change.
-5. Open **Audit trail** to show the old value, new value, actor, role, source and reason.
-6. Open **Data queries**, answer an open query as Study Coordinator, switch to Data Manager and close an answered query.
-7. Open **Data exports** and explain collection-to-tabulation traceability.
 
 ## Repository map
 
