@@ -1,0 +1,24 @@
+Requirement_ID,Design_Component,Implementation,Verification
+URS-001,Study overview dashboard,components/oncosource-app.tsx DashboardView,UAT-001
+URS-002,Synthetic study generator,lib/demo-data.ts createSubjects,UAT-002
+URS-003,Metadata-driven forms,lib/study-config.ts and FieldControl,UAT-003
+URS-004,Typed field controls,components/oncosource-app.tsx FieldControl,UAT-004
+URS-005,Edit-check engine,lib/validation.ts,Automated validation tests
+URS-006,Automatic query creation,commitSave in components/oncosource-app.tsx,UAT-005
+URS-007,Reason-for-change dialog,reasonOpen workflow in components/oncosource-app.tsx,UAT-006
+URS-008,Audit event model,lib/trial-types.ts and commitSave,UAT-006
+URS-009,Query lifecycle,QueriesView and actOnQuery,UAT-007
+URS-010,Role-sensitive actions,role selector and action guards,UAT-007
+URS-011,Form review states,transitionStatus workflow,UAT-008
+URS-012,Read-only lock,CaptureView locked guard,UAT-009
+URS-013,FHIR provenance,importFhir and provenance badges,UAT-010
+URS-014,JSON and audit export,lib/exporters.ts,UAT-011
+URS-015,ODM and domain export,lib/exporters.ts,Automated export tests
+URS-016,Local persistence,localStorage effects,UAT-012
+URS-017,Reset demonstration,resetDemo,UAT-013
+NFR-001,Responsive layout,Tailwind responsive rules,Build and visual review
+NFR-002,Typography and contrast,app/globals.css,Visual review
+NFR-003,Accessible controls,Semantic labels and Shadcn primitives,Keyboard review
+NFR-004,Synthetic-only source,lib/demo-data.ts and synthetic-data/,Repository inspection
+NFR-005,Clinical-use disclaimer,README and persistent sidebar,Repository and UI review
+NFR-006,Automated domain tests,tests/,Continuous integration

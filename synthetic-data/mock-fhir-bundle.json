@@ -1,0 +1,116 @@
+{
+  "resourceType": "Bundle",
+  "id": "oncosource-predose-import",
+  "type": "collection",
+  "timestamp": "2026-09-11T09:02:00Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/oncosource/data-classification",
+        "code": "synthetic",
+        "display": "Synthetic educational data"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:mock-patient-001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "mock-patient-001",
+        "identifier": [
+          {
+            "system": "https://example.org/oncosource/subject-id",
+            "value": "OS-CHN-0001"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1969-01-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:mock-weight-001",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mock-weight-001",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mock-patient-001"
+        },
+        "effectiveDateTime": "2026-09-11T08:20:00Z",
+        "valueQuantity": {
+          "value": 66.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:mock-anc-001",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mock-anc-001",
+        "status": "final",
+        "code": {
+          "text": "Absolute neutrophil count"
+        },
+        "subject": {
+          "reference": "Patient/mock-patient-001"
+        },
+        "effectiveDateTime": "2026-09-11T08:20:00Z",
+        "valueQuantity": {
+          "value": 2.84,
+          "unit": "10^9/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:mock-platelets-001",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mock-platelets-001",
+        "status": "final",
+        "code": {
+          "text": "Platelet count"
+        },
+        "subject": {
+          "reference": "Patient/mock-patient-001"
+        },
+        "effectiveDateTime": "2026-09-11T08:20:00Z",
+        "valueQuantity": {
+          "value": 224,
+          "unit": "10^9/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:mock-crcl-001",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mock-crcl-001",
+        "status": "final",
+        "code": {
+          "text": "Calculated creatinine clearance"
+        },
+        "subject": {
+          "reference": "Patient/mock-patient-001"
+        },
+        "effectiveDateTime": "2026-09-11T08:20:00Z",
+        "valueQuantity": {
+          "value": 78,
+          "unit": "mL/min"
+        }
+      }
+    }
+  ]
+}

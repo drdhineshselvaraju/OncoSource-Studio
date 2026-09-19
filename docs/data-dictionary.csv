@@ -1,0 +1,32 @@
+Form,Field_ID,Label,Data_Type,Required,Unit,Controlled_Values,CDASH_Reference,Target_Domain
+Eligibility,consent_date,Informed consent date,date,Yes,,,RFICDTC,DM
+Eligibility,screening_date,Screening assessment date,date,Yes,,,IEDTC,IE
+Eligibility,age,Age at consent,number,Yes,years,,AGE,DM
+Eligibility,sex,Sex at birth,select,Yes,,Female|Male,SEX,DM
+Eligibility,histology_confirmed,NSCLC histologically confirmed,boolean,Yes,,Yes|No,IETESTCD,IE
+Eligibility,ecog,ECOG performance status,select,Yes,,0|1|2|3|4,EGORRES,QS
+Eligibility,eligibility_comment,Eligibility assessment note,text,No,,,IECOM,IE
+Pre-dose,visit_date,Cycle 2 Day 1 visit date,date,Yes,,,SVSTDTC,SV
+Pre-dose,weight_kg,Weight,number,Yes,kg,,VSORRES,VS
+Pre-dose,height_cm,Height,number,Yes,cm,,VSORRES,VS
+Pre-dose,anc_x10e9_l,Absolute neutrophil count,number,Yes,×10⁹/L,,LBORRES,LB
+Pre-dose,platelets_x10e9_l,Platelet count,number,Yes,×10⁹/L,,LBORRES,LB
+Pre-dose,creatinine_clearance_ml_min,Calculated creatinine clearance,number,Yes,mL/min,,LBSTRESN,LB
+Pre-dose,laboratory_collected_at,Laboratory collection time,date-time,Yes,,,LBDTC,LB
+Pre-dose,treatment_planned,Treatment planned after review,boolean,Yes,,Yes|No,EXYN,EX
+Treatment,administered,Study treatment administered,boolean,Yes,,Yes|No,EXYN,EX
+Treatment,dose_mg_m2,Protocol dose,number,Conditional,mg/m²,,EXDOSE,EX
+Treatment,actual_dose_mg,Actual dose administered,number,Conditional,mg,,EXDOSE,EX
+Treatment,dose_start,Administration start,date-time,Conditional,,,EXSTDTC,EX
+Treatment,dose_end,Administration end,date-time,Conditional,,,EXENDTC,EX
+Treatment,dose_modified,Dose modified,boolean,No,,Yes|No,EXADJ,EX
+Treatment,modification_reason,Modification or interruption reason,text,Conditional,,,EXADJRS,EX
+Adverse event,ae_term,Adverse event term,text,Conditional,,,AETERM,AE
+Adverse event,ae_start_date,Start date,date,Conditional,,,AESTDTC,AE
+Adverse event,ae_end_date,End date,date,No,,,AEENDTC,AE
+Adverse event,ae_grade,CTCAE grade,select,Conditional,,1|2|3|4|5,AETOXGR,AE
+Adverse event,ae_serious,Serious adverse event,boolean,No,,Yes|No,AESER,AE
+Adverse event,seriousness_criterion,Seriousness criterion,select,Conditional,,Death|Life-threatening|Hospitalisation|Disability or incapacity|Congenital anomaly|Other medically important event,AESCONG,AE
+Adverse event,causality,Relationship to study treatment,select,Conditional,,Not related|Unlikely|Possible|Probable|Definite,AEREL,AE
+Adverse event,action_taken,Action taken with study treatment,select,Conditional,,None|Dose reduced|Interrupted|Withdrawn|Not applicable,AEACN,AE
+Adverse event,outcome,Outcome,select,Conditional,,Recovered|Recovering|Not recovered|Recovered with sequelae|Fatal|Unknown,AEOUT,AE

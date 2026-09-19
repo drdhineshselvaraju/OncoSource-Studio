@@ -1,0 +1,14 @@
+Rule_ID,Form,Field,Trigger,Severity,Query_Text,Resolution
+CONSENT-001,Consent and eligibility,screening_date,Screening date is earlier than consent date,Error,Screening cannot occur before informed consent.,Correct date or document verified source
+ELIG-001,Consent and eligibility,age,Age is blank or less than 18,Error,Participant must be at least 18 years old at consent.,Correct age or confirm ineligibility
+ELIG-002,Consent and eligibility,histology_confirmed,Histological confirmation is not Yes,Error,Histological confirmation is required by the demonstration protocol.,Review pathology source
+ELIG-003,Consent and eligibility,ecog,ECOG is blank or greater than 1,Error,Protocol eligibility requires ECOG performance status 0 or 1.,Review source and eligibility
+LAB-001,Pre-dose assessment,anc_x10e9_l,ANC is less than 1.5 ×10⁹/L,Warning,Confirm result and treatment decision.,Verify laboratory report and document decision
+LAB-002,Pre-dose assessment,platelets_x10e9_l,Platelets are less than 100 ×10⁹/L,Warning,Platelet count is below the protocol treatment threshold.,Verify result and treatment decision
+LAB-003,Pre-dose assessment,creatinine_clearance_ml_min,Creatinine clearance is less than 45 mL/min,Error,Creatinine clearance is below the demonstration protocol threshold.,Verify calculation and investigator decision
+EX-001,Treatment,actual_dose_mg,Treatment administered and required dose or timing is blank,Error,Dose and administration timing are required.,Complete administration source data
+EX-002,Treatment,dose_end,End date-time is earlier than start date-time,Error,Administration end cannot precede administration start.,Correct chronology
+EX-003,Treatment,modification_reason,Dose modified is Yes and reason is blank,Error,A modification reason is required.,Document source-supported reason
+AE-001,Adverse event,core_fields,AE term exists and a core field is blank,Error,Complete all core adverse-event fields.,Complete event assessment
+AE-002,Adverse event,ae_end_date,End date is earlier than start date,Error,Adverse-event end date cannot precede start date.,Correct chronology
+AE-003,Adverse event,seriousness_criterion,Serious is Yes and criterion is blank,Error,Seriousness criterion is required.,Select supported seriousness criterion
